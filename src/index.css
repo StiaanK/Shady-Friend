@@ -1,0 +1,26 @@
+body {
+    background: linear-gradient(to bottom right, #9c27b0, #2196f3, #e91e63); /* Purple to blue to pink gradient */
+    font-family: 'Arial', sans-serif;
+}
+
+.color-square {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: inline-block;
+    background-color: #000; /* Default color */
+    border-radius: 8px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    border-radius: 8px;
+}
