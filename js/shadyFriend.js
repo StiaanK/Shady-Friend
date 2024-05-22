@@ -12,8 +12,18 @@ input.addEventListener('input',(e)=>{
 function setBaseColour(colour){
     var baseColour = document.getElementById('baseColour');
     
+    
+    //add a hex code check
     if(colour!=''){
-        baseColour.style.backgroundColor = colour;
+        if(colour[0]=='#'){
+            baseColour.style.backgroundColor = colour;
+        }
+        else{
+            colour = '#' + colour;
+            console.log(colour)
+            baseColour.style.backgroundColor = colour
+        }
+        
     }
     else{
         baseColour.style.backgroundColor = 'hex(#f2e6f)';
