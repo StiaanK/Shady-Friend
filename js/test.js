@@ -11,6 +11,11 @@ input.addEventListener('input',(e)=>{
 // This function recieves an parameter and sets the background of the baseColour square
 function setBaseColour(colour){
     var baseColour = document.getElementById('baseColour');
-    baseColour.style.backgroundColor = colour;
+    
+    if(colour!=''){
+        baseColour.style.backgroundColor = colour;
+    }
 }
+    
+    
 
