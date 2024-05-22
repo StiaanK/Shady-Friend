@@ -15,6 +15,9 @@ function setBaseColour(colour){
     if(colour!=''){
         baseColour.style.backgroundColor = colour;
     }
+    else{
+        baseColour.style.backgroundColor = 'hex(#f2e6f)';
+    }
 }
     
     
