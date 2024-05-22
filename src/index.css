@@ -1,26 +1,40 @@
 body {
-    background: linear-gradient(to bottom right, #9c27b0, #2196f3, #e91e63); /* Purple to blue to pink gradient */
-    font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: #001220;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.color-square {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    display: inline-block;
-    background-color: #000; /* Default color */
-    border-radius: 8px;
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10vw;
 }
 
-.container {
-    margin-top: 50px;
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
 
 input[type="text"] {
-    border-radius: 8px;
+    border-color: #9966cc; /* Complementary purple */
+    background-color: #f2e6ff; /* Light complementary color */
+    color: #242323; /* Dark text color for contrast */
 }
+  
+  .container {
+    color: #f2e6ff;
+  }
+  
+  .color-squares {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .square {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid #9966cc; /* Complementary purple */
+    background-color: #f2e6ff; /* Light complementary color */
+    margin-bottom: 10px;
+  }
+  
