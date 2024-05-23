@@ -7,3 +7,5 @@ Now this is all nice and dandy, but the problem again is I am bad with this and 
 
 The idea is to have a set patern that for the shading and lighting that I want to use in my art for example the base colour wil be darkened by 15% and then 25% and then 50%, the same goes for lighting it. My first challenge is figuring out how the Hell one would enter a percentage and then perform some colour shenanigans to darken or lighten the colour by said percent... 
 
+Sources used:
+Hex to HSB - https://www.30secondsofcode.org/js/s/rgb-hex-hsl-hsb-color-format-conversion/
