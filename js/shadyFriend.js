@@ -8,12 +8,14 @@ input.addEventListener('input',(e)=>{
     if(colour!=''){
         if(colour[0]=='#'){
             setBaseColour(colour);
-            setLightOne(colour)
+            setLightOne(colour);
+            setDarkOne(colour);
         }
         else{
             colour = '#' + colour;
             setBaseColour(colour);
-            setLightOne(colour)
+            setLightOne(colour);
+            setDarkOne(colour);
         } 
     }
     else{
@@ -32,11 +34,65 @@ function setLightOne(colour){
     var h = hsb[0]
     var s = hsb[1]
     var b = hsb[2]
+    const yHue = 60
+    var inc = 1
+    var lightOne = document.getElementById("lightOne")
+    let hex =""
+
+    //check how close the hue is to yellow
+    if(h < yHue){
+        h = h + inc*10
+    }
+    else if(h > yHue){
+        h = h - inc*10
+    }
     
-    var yHue = 60
+    //decreasing the saturation
+    s = s - inc*10
+
+    //increasing brightness
+    b = b + inc*10
     
-    //console.log("hsb: "+ h + " "+ s+" "+b)
+    //getting hex code
+    hex = "#" + hsbToHex(h,s,b)
+    console.log("hsb: "+ h + " "+ s+" "+b)
+    console.log("hex: "+hex)
+    
+    lightOne.style.backgroundColor= hex
 }  
+
+const setDarkOne = colour =>{
+    var hsb = hexToHSB(colour)
+    var h = hsb[0]
+    var s = hsb[1]
+    var b = hsb[2]
+    const pHue = 300
+    var inc = 1
+    var darkOne = document.getElementById("darkOne")
+    let hex =""
+
+    //check how close the hue is to yellow
+    if(h < pHue){
+        h = h + inc*10
+    }
+    else if(h > pHue){
+        h = h - inc*10
+    }
+    
+    //increasing the saturation
+    s = s + inc*10
+
+    //decreasing brightness
+    b = b - inc*5
+    
+    //getting hex code
+    hex = "#" + hsbToHex(h,s,b)
+    console.log("hsb: "+ h + " "+ s+" "+b)
+    console.log("hex: "+hex)
+    
+    darkOne.style.backgroundColor= hex
+}
+
 
 const hexToRGB = hex => {
     let alpha = false,
@@ -71,5 +127,11 @@ const hsbToRgb = (h, s, b) => {
     return [parseInt(255 * f(5)), parseInt(255 * f(3)), parseInt(255 * f(1))];
   };
   
+const rgbToHex = (r, g, b) =>{
+    return ((r << 16) + (g << 8) + b).toString(16).padStart(6, '0');
+  }
 
-
+const hsbToHex = (h, s, b) =>{
+    var rgb = hsbToRgb(h, s, b)
+    return rgbToHex(rgb[0],rgb[1],rgb[2])
+}
