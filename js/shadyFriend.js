@@ -10,12 +10,16 @@ input.addEventListener('input',(e)=>{
             setBaseColour(colour);
             setLightOne(colour);
             setDarkOne(colour);
+            setLightTwo(colour);
+            setDarkTwo(colour);
         }
         else{
             colour = '#' + colour;
             setBaseColour(colour);
             setLightOne(colour);
             setDarkOne(colour);
+            setLightTwo(colour);
+            setDarkTwo(colour);
         } 
     }
     else{
@@ -61,6 +65,38 @@ function setLightOne(colour){
     lightOne.style.backgroundColor= hex
 }  
 
+const setLightTwo = colour =>{
+    var hsb = hexToHSB(colour)
+    var h = hsb[0]
+    var s = hsb[1]
+    var b = hsb[2]
+    const yHue = 60
+    var inc = 1
+    var lightOne = document.getElementById("lightTwo")
+    let hex =""
+
+    //check how close the hue is to yellow
+    if(h < yHue){
+        h = h + inc*20
+    }
+    else if(h > yHue){
+        h = h - inc*20
+    }
+    
+    //decreasing the saturation
+    s = s - inc*20
+
+    //increasing brightness
+    b = b + inc*20
+    
+    //getting hex code
+    hex = "#" + hsbToHex(h,s,b)
+    console.log("hsb: "+ h + " "+ s+" "+b)
+    console.log("hex: "+hex)
+    
+    lightTwo.style.backgroundColor= hex
+}
+
 const setDarkOne = colour =>{
     var hsb = hexToHSB(colour)
     var h = hsb[0]
@@ -93,6 +129,52 @@ const setDarkOne = colour =>{
     darkOne.style.backgroundColor= hex
 }
 
+const setDarkTwo = colour =>{
+    var hsb = hexToHSB(colour)
+    var h = hsb[0]
+    var s = hsb[1]
+    var b = hsb[2]
+    const pHue = 300
+    var inc = 1
+    var darkTwo = document.getElementById("darkTwo")
+    let hex =""
+
+    //check how close the hue is to yellow
+    if(h < pHue){
+        h = h + inc*20
+    }
+    else if(h > pHue){
+        h = h - inc*20
+    }
+    
+    //increasing the saturation
+    s = s + inc*20
+
+    //decreasing brightness
+    b = b - inc*10
+    
+
+    if(s<=0){
+        s=0
+    }
+    if(b<=0){
+        b=0
+    }
+
+    if(s>=100){
+        s=100
+    }
+    if(b>=100){
+        b=100
+    }
+    //getting hex code
+    hex = "#" + hsbToHex(h,s,b)
+    console.log("test: "+hex)
+    console.log("hsb: "+ h + " "+ s+" "+b)
+    console.log("hex: "+hex)
+    
+    darkTwo.style.backgroundColor=hex
+}
 
 const hexToRGB = hex => {
     let alpha = false,
