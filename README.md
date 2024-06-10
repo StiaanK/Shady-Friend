@@ -1,4 +1,4 @@
-https://stiaank.github.io/website/
+https://stiaank.github.io/Shady-Friend
 
 
 So I like to make pixel art, the problem is I am bad with colours, especailly when it comes to lighting and darkening colours. As I did more research I learned about a techinqiue called "Hue shifting". This technique involves changing the HSV/HSB values of a colour. To darken a colour it's hue shifts more towards purple and to lighten a colour it shifts more towards yellow.
