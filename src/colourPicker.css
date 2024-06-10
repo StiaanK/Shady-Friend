@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    background: #001220;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  section {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 10vw;
+      display: flex;
+  }
+  
+  input[type="text"] {
+      border-color: #9966cc; /* Complementary purple */
+      background-color: #f2e6ff; /* Light complementary color */
+      color: #242323; /* Dark text color for contrast */  
+  }
+  
+  input[type="color"] {
+    border: none;
+    border-color: #9966cc; /* Complementary purple */
+    background-color: #f2e6ff; /* Light complementary color */
+    color: #242323; /* Dark text color for contrast */  
+  }
+    
+    .container {
+      color: #f2e6ff;
+      
+    }
+    
+    .color-squares {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .square {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      border: 1px solid #9966cc; /* Complementary purple */
+      background-color: #f2e6ff; /* Light complementary color */
+      margin-bottom: 10px;
+    }
+  
+  .input-wrapper { 
+    position: relative; 
+    display: flex;
+    width: 100%; 
+  } 
+  
+  .input-wrapper input { 
+    padding-right: 40px; 
+  } 
+  
+  .input-wrapper button { 
+    position: absolute; 
+    right: 0; 
+    border: none; 
+    height: 80%;
+    background-color: transparent; 
+    cursor: pointer; 
+  }
+  
+  /* Modal CSS */
+
+  

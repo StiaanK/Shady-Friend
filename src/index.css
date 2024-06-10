@@ -11,22 +11,32 @@ section {
     flex-direction: column;
     align-items: center;
     padding: 10px 10vw;
+    display: flex;
 }
-
 
 input[type="text"] {
     border-color: #9966cc; /* Complementary purple */
     background-color: #f2e6ff; /* Light complementary color */
-    color: #242323; /* Dark text color for contrast */
+    color: #242323; /* Dark text color for contrast */  
+}
+
+input[type="color"] {
+  border: none;
+  border-color: #9966cc; /* Complementary purple */
+  background-color: #f2e6ff; /* Light complementary color */
+  color: #242323; /* Dark text color for contrast */  
 }
   
   .container {
     color: #f2e6ff;
+    
   }
   
   .color-squares {
     display: flex;
     justify-content: space-between;
+    color: transparent;
+    
   }
   
   .square {
@@ -36,5 +46,91 @@ input[type="text"] {
     border: 1px solid #9966cc; /* Complementary purple */
     background-color: #f2e6ff; /* Light complementary color */
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; 
+    overflow: hidden;
   }
-  
+
+  .square > p{
+    font-size: 5px;
+    text-align: center; /* Center the text horizontally */
+    margin: 0; /* Remove default margin */
+    /*padding-bottom: 5px; /* Adjust padding if needed to position text */
+  }
+
+  .square:hover{
+    transform: scale(3);
+    transition: transform .2s;
+    color: #242323;
+    font-size: 5px;
+    text-align: center; /* Center the text horizontally */
+    margin: 0; /* Remove default margin */
+    padding-bottom: 0px; /* Adjust padding if needed to position text */
+  }
+
+  .square:active{
+    transform: scale(3);
+  }
+
+.input-wrapper { 
+  position: relative; 
+  display: flex;
+  width: 100%; 
+} 
+
+.input-wrapper input { 
+  padding-right: 40px; 
+} 
+
+.input-wrapper button { 
+  position: absolute; 
+  right: 0; 
+  border: none; 
+  height: 80%;
+  background-color: transparent; 
+  cursor: pointer; 
+}
+
+/* Modal CSS 
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+  justify-content: center; 
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+*/

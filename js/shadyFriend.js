@@ -17,7 +17,6 @@ input.addEventListener('input',(e)=>{
             setLightTwo(colour);
             setDarkOne(colour);
             setDarkTwo(colour);
-
         }
         else{
             colour = '#' + colour;
@@ -36,7 +35,9 @@ input.addEventListener('input',(e)=>{
 // This function recieves an parameter and sets the background of the baseColour square
 function setBaseColour(colour){
     var baseColour = document.getElementById('baseColour');
-    baseColour.style.backgroundColor = colour    
+    var txt = document.getElementById('baseTxt')
+    baseColour.style.backgroundColor = colour   
+    txt.textContent = colour
 }
     
 function setLightOne(colour){
@@ -46,6 +47,7 @@ function setLightOne(colour){
     var b = hsb[2]
     const yHue = 60
     var lightOne = document.getElementById("lightOne")
+    var txt = document.getElementById("lightOneTxt")
     let hex =""
 
     //check how close the hue is to yellow
@@ -87,10 +89,11 @@ function setLightOne(colour){
 
     //getting hex code
     hex = "#" + hsbToHex(h,s,b)
-    console.log("l1 hsb: "+ h + " "+ s+" "+b)
-    console.log(" hex: "+hex)
+    //console.log("l1 hsb: "+ h + " "+ s+" "+b)
+    //console.log(" hex: "+hex)
     
     lightOne.style.backgroundColor= hex
+    txt.textContent = hex
 }  
 
 const setLightTwo = colour =>{
@@ -99,7 +102,8 @@ const setLightTwo = colour =>{
     var s = hsb[1]
     var b = hsb[2]
     const yHue = 60
-    var lightOne = document.getElementById("lightTwo")
+    var lightTwo = document.getElementById("lightTwo")
+    var txt = document.getElementById("lightTwoTxt")
     let hex =""
 
     //check how close the hue is to yellow
@@ -139,10 +143,11 @@ const setLightTwo = colour =>{
 
     //getting hex code
     hex = "#" + hsbToHex(h,s,b)
-    console.log("l2 hsb: "+ h + " "+ s+" "+b)
-    console.log(" hex: "+hex)
+    //console.log("l2 hsb: "+ h + " "+ s+" "+b)
+    //console.log(" hex: "+hex)
     
     lightTwo.style.backgroundColor= hex
+    txt.textContent = hex
 }
 
 const setDarkOne = colour =>{
@@ -152,6 +157,7 @@ const setDarkOne = colour =>{
     var b = hsb[2]
     const pHue = 300
     var darkOne = document.getElementById("darkOne")
+    var txt = document.getElementById("darkOneTxt")
     let hex =""
 
     //check how close the hue is to yellow
@@ -191,10 +197,11 @@ const setDarkOne = colour =>{
 
     //getting hex code
     hex = "#" + hsbToHex(h,s,b)
-    console.log("b1 hsb: "+ h + " "+ s+" "+b)
-    console.log(" hex: "+hex)
+    //console.log("b1 hsb: "+ h + " "+ s+" "+b)
+    //console.log(" hex: "+hex)
     
-    darkOne.style.backgroundColor= hex
+    darkOne.style.backgroundColor = hex
+    txt.textContent = hex
 }
 
 const setDarkTwo = colour =>{
@@ -204,6 +211,7 @@ const setDarkTwo = colour =>{
     var b = hsb[2]
     const pHue = 300
     var darkTwo = document.getElementById("darkTwo")
+    var txt = document.getElementById("darkTwoTxt")
     let hex =""
 
     //check how close the hue is to yellow
@@ -243,11 +251,14 @@ const setDarkTwo = colour =>{
     }
     //getting hex code
     hex = "#" + hsbToHex(h,s,b)
-    console.log("b2 hsb: "+ h + " "+ s+" "+b)
-    console.log(" hex: "+hex)
+    //console.log("b2 hsb: "+ h + " "+ s+" "+b)
+    //console.log(" hex: "+hex)
     
     darkTwo.style.backgroundColor=hex
+    txt.textContent=hex
 }
+
+//make it's own script
 
 const hexToRGB = hex => {
     let alpha = false,

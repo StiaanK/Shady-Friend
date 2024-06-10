@@ -12,19 +12,35 @@
   <h1 class="text-center mt-5">Shady Friend</h1>
   <div class="row justify-content-center mt-5">
     <div class="col-md-4">
-      <input type="text" class="form-control mb-3" id="colourInput" placeholder="Enter hex color code">
+      <div class="input-wrapper"> 
+        <input type="text" class="form-control mb-3" id="colourInput" placeholder="Enter hex colour code">
+        <!-- <button id="colourPickerBtn">🎨</button> -->
+      </div>
+     
       <div class="color-squares">
-        <div class="square" id="lightTwo"></div>
-        <div class="square" id="lightOne"></div>
-        <div class="square" id="baseColour"></div>
-        <div class="square" id="darkOne"></div>
-        <div class="square" id="darkTwo"></div>
+        <div class="square" id="lightTwo"><p id="lightTwoTxt"></p></div>
+        <div class="square" id="lightOne"><p id="lightOneTxt"></p></div>
+        <div class="square" id="baseColour"><p id="baseTxt"></p></div>
+        <div class="square" id="darkOne"><p id="darkOneTxt"></p></div>
+        <div class="square" id="darkTwo"><p id="darkTwoTxt"></p></div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- colour-picker 
+<div class="colour-picker-hidden">
+  <canvas id="colourCanvas" width="300" height="300"></canvas>
+  <div class="colour-info">
+      <div id="selectedColour" class="colour-box"></div>
+      <p id="colourValue">#000000</p>
+  </div>
+</div>
+-->
+
 <script src="./js/shadyFriend.js"> </script>
+<script src="./js/colourPicker.js"> </script>
+
 
 </body>
 </html>
