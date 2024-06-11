@@ -3,6 +3,14 @@ let hInc = 5
 let sInc = 10
 let bInc = 10
 let inc = 1
+/*
+let lightTwo = document.getElementById('lightTwo')
+
+lightTwo.addEventListener('click',()=>{
+    lightTwo.style.transform = "scale(3)"
+    console.log('tye')
+})
+*/
 
 
 // This function gets the input text and sends it to the setBAseColour() function
@@ -102,7 +110,6 @@ const setLightTwo = colour =>{
     var s = hsb[1]
     var b = hsb[2]
     const yHue = 60
-    var lightTwo = document.getElementById("lightTwo")
     var txt = document.getElementById("lightTwoTxt")
     let hex =""
 

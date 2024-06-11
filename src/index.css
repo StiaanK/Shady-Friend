@@ -60,7 +60,7 @@ input[type="color"] {
     /*padding-bottom: 5px; /* Adjust padding if needed to position text */
   }
 
-  .square:hover{
+  .square:hover, .square:active{
     transform: scale(3);
     transition: transform .2s;
     color: #242323;
@@ -70,9 +70,7 @@ input[type="color"] {
     padding-bottom: 0px; /* Adjust padding if needed to position text */
   }
 
-  .square:active{
-    transform: scale(3);
-  }
+ 
 
 .input-wrapper { 
   position: relative; 
