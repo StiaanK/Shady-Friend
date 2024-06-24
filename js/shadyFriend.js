@@ -3,6 +3,7 @@ let hInc = 5
 let sInc = 10
 let bInc = 10
 let inc = 1
+let incSlide = document.getElementById('incSlide')
 /*
 let lightTwo = document.getElementById('lightTwo')
 
@@ -12,6 +13,33 @@ lightTwo.addEventListener('click',()=>{
 })
 */
 
+incSlide.addEventListener('input',(e)=>{
+    inc = e.target.value
+    var colour = input.value
+
+
+    if(colour!=''){
+        if(colour[0]=='#'){
+            setBaseColour(colour);
+            setLightOne(colour);
+            setLightTwo(colour);
+            setDarkOne(colour);
+            setDarkTwo(colour);
+        }
+        else{
+            colour = '#' + colour;
+            setBaseColour(colour);
+            setLightOne(colour);
+            setLightTwo(colour);
+            setDarkOne(colour);
+            setDarkTwo(colour);
+        } 
+    }
+    else{
+        setBaseColour('#f2e6f')
+    }
+
+})
 
 // This function gets the input text and sends it to the setBAseColour() function
 input.addEventListener('input',(e)=>{
