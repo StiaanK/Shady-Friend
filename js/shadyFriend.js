@@ -1,3 +1,5 @@
+import * as con from './conversion.js'
+
 var input = document.getElementById('colourInput')
 let hInc = 5
 let sInc = 10
@@ -77,7 +79,7 @@ function setBaseColour(colour){
 }
     
 function setLightOne(colour){
-    var hsb = hexToHSB(colour)
+    var hsb = con.hexToHSB(colour)
     var h = hsb[0]
     var s = hsb[1]
     var b = hsb[2]
@@ -124,7 +126,7 @@ function setLightOne(colour){
     }
 
     //getting hex code
-    hex = "#" + hsbToHex(h,s,b)
+    hex = "#" + con.hsbToHex(h,s,b)
     //console.log("l1 hsb: "+ h + " "+ s+" "+b)
     //console.log(" hex: "+hex)
     
@@ -133,7 +135,7 @@ function setLightOne(colour){
 }  
 
 const setLightTwo = colour =>{
-    var hsb = hexToHSB(colour)
+    var hsb = con.hexToHSB(colour)
     var h = hsb[0]
     var s = hsb[1]
     var b = hsb[2]
@@ -177,7 +179,7 @@ const setLightTwo = colour =>{
     }
 
     //getting hex code
-    hex = "#" + hsbToHex(h,s,b)
+    hex = "#" + con.hsbToHex(h,s,b)
     //console.log("l2 hsb: "+ h + " "+ s+" "+b)
     //console.log(" hex: "+hex)
     
@@ -186,7 +188,7 @@ const setLightTwo = colour =>{
 }
 
 const setDarkOne = colour =>{
-    var hsb = hexToHSB(colour)
+    var hsb = con.hexToHSB(colour)
     var h = hsb[0]
     var s = hsb[1]
     var b = hsb[2]
@@ -231,7 +233,7 @@ const setDarkOne = colour =>{
     }
 
     //getting hex code
-    hex = "#" + hsbToHex(h,s,b)
+    hex = "#" + con.hsbToHex(h,s,b)
     //console.log("b1 hsb: "+ h + " "+ s+" "+b)
     //console.log(" hex: "+hex)
     
@@ -240,7 +242,7 @@ const setDarkOne = colour =>{
 }
 
 const setDarkTwo = colour =>{
-    var hsb = hexToHSB(colour)
+    var hsb = con.hexToHSB(colour)
     var h = hsb[0]
     var s = hsb[1]
     var b = hsb[2]
@@ -285,7 +287,7 @@ const setDarkTwo = colour =>{
         b=100
     }
     //getting hex code
-    hex = "#" + hsbToHex(h,s,b)
+    hex = "#" + con.hsbToHex(h,s,b)
     //console.log("b2 hsb: "+ h + " "+ s+" "+b)
     //console.log(" hex: "+hex)
     
@@ -295,6 +297,7 @@ const setDarkTwo = colour =>{
 
 //make it's own script
 
+/*
 const hexToRGB = hex => {
     let alpha = false,
       h = hex.slice(hex.startsWith('#') ? 1 : 0);
@@ -335,4 +338,4 @@ const rgbToHex = (r, g, b) =>{
 const hsbToHex = (h, s, b) =>{
     var rgb = hsbToRgb(h, s, b)
     return rgbToHex(rgb[0],rgb[1],rgb[2])
-}
+}*/
